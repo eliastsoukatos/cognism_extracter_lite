@@ -2,20 +2,17 @@ import sqlite3
 
 def choose_database():
     """
-    Prompt the user to choose between `contacts.db` and `urls.db`.
+    Prompt the user to choose their database`.
     """
     while True:
         print("\n📂 Select a database to view or clear:")
         print("1️⃣ contacts.db")
-        print("2️⃣ urls.db")
-        choice = input("Enter the number of your choice (1 or 2): ").strip()
+        choice = input("Enter the number of your choice (1): ").strip()
 
         if choice == "1":
             return "contacts.db"
-        elif choice == "2":
-            return "urls.db"
         else:
-            print("❌ Invalid choice. Please enter 1 or 2.")
+            print("❌ Invalid choice. Please enter 1.")
 
 def view_data(db_name):
     """
